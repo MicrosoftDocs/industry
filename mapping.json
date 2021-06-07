@@ -12,7 +12,7 @@
           "service_index": "index.md",
           "swagger_files": [
             {
-              "source": "industry-rest/industry-solutions/retail/intelligent-recommendations/ir.json"
+              "source": "industry-rest/industry-solutions/retail/intelligent-recommendations/reference/ir.json"
             }
           ]
       }]
