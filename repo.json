@@ -1,7 +1,8 @@
 {
-  "repo": [{
-    "url": "{swagger_repo}",
-    "branch": "{swagger_repo_branch}",
-    "name": "{local_swagger_src_folder}"
-  }]
+  "repo": [
+  {
+         "url":"https://github.com/MicrosoftDocs/industry-solutions-pr",
+         "branch":"ir-july-release",
+         "name":"industry-rest"
+      }
 }
