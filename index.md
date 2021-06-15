@@ -1,3 +1,3 @@
-# Intelligent Recommendation REST API
+# Intelligent Recommendations REST API
 
 TODO: Add description
