@@ -1,7 +1,7 @@
 ### YamlMime:RESTOperation
 uid: drs.prod.reco.microsoft.com.industry-rest.discovery.getitemselectors
 name: Get Item Selectors
-service: Industry Rest
+service: Intelligent Recommendations
 groupName: Discovery
 apiVersion: 2021-06-15-preview-008
 summary: Use this helper API to receive “selectors” or filters (if applicable) for the Visual Similar recommendations lists.

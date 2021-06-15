@@ -1,7 +1,7 @@
 ### YamlMime:RESTOperation
 uid: drs.prod.reco.microsoft.com.industry-rest.topcharts.getnewitems
 name: Get New Items
-service: Industry Rest
+service: Intelligent Recommendations
 groupName: Top Charts
 apiVersion: 2021-06-15-preview-008
 summary: Returns the catalog items ranked by release date, newest first.
@@ -130,5 +130,5 @@ security:
   - name: user_impersonation
     description: Impersonate your user account.
 metadata:
-  description: Learn more about Industry Rest service - Returns the catalog items ranked by release date, newest first.
+  description: Learn more about Intelligent Recommendations service - Returns the catalog items ranked by release date, newest first.
 errorCodes: []

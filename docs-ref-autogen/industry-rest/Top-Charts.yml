@@ -2,9 +2,9 @@
 uid: drs.prod.reco.microsoft.com.industry-rest.topcharts
 name: Top Charts
 apiVersion: 2021-06-15-preview-008
-service: Industry Rest
+service: Intelligent Recommendations
 metadata:
-  description: Learn more about [Industry Rest Top Charts Operations]. How to [Get New Items,Get Popular Items,Get Trending Items].
+  description: Learn more about [Intelligent Recommendations Top Charts Operations]. How to [Get New Items,Get Popular Items,Get Trending Items].
 operations:
 - uid: drs.prod.reco.microsoft.com.industry-rest.topcharts.getnewitems
   summary: Returns the catalog items ranked by release date, newest first.

@@ -1,7 +1,7 @@
 ### YamlMime:RESTOperation
 uid: drs.prod.reco.microsoft.com.industry-rest.topcharts.gettrendingitems
 name: Get Trending Items
-service: Industry Rest
+service: Intelligent Recommendations
 groupName: Top Charts
 apiVersion: 2021-06-15-preview-008
 summary: Returns the catalog items ranked by popularity giving newer events more weight than older ones. Popularity is scored over a period of configurable period of time.

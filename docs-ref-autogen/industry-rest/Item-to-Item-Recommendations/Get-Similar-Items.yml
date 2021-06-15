@@ -1,7 +1,7 @@
 ### YamlMime:RESTOperation
 uid: drs.prod.reco.microsoft.com.industry-rest.item-to-itemrecommendations.getsimilaritems
 name: Get Similar Items
-service: Industry Rest
+service: Intelligent Recommendations
 groupName: Item-to-Item Recommendations
 apiVersion: 2021-06-15-preview-008
 summary: Returns a list of item->item recommendations. Recommended items can be similar to the seed item or related in some way, this based on the way data is structured and based on the desired algorithm.

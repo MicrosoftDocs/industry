@@ -1,7 +1,7 @@
 ### YamlMime:RESTOperation
 uid: drs.prod.reco.microsoft.com.industry-rest.item-to-itemrecommendations.getcartrecommendations
 name: Get Cart Recommendations
-service: Industry Rest
+service: Intelligent Recommendations
 groupName: Item-to-Item Recommendations
 apiVersion: 2021-06-15-preview-008
 summary: Single item version - Cart, or 'Frequenty Bought Together' (FBT) recommendations return items which are likely to be consumed together with the seed item.
