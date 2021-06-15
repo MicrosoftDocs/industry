@@ -1,4 +1,4 @@
-# Industry Rest
+# Intelligent Recommendations
 ## [Overview](../index.md)
 ## Discovery
 ### [Overview](industry-rest/Discovery.yml)

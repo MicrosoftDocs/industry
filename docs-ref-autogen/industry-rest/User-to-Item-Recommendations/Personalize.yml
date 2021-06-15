@@ -1,7 +1,7 @@
 ### YamlMime:RESTOperation
 uid: drs.prod.reco.microsoft.com.industry-rest.user-to-itemrecommendations.personalize
 name: Personalize
-service: Industry Rest
+service: Intelligent Recommendations
 groupName: User-to-Item Recommendations
 apiVersion: 2021-06-15-preview-008
 summary: Personalizes the given set of items and returns them reranked with top item being most likely for user to interact with.

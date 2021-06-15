@@ -1,7 +1,7 @@
 ### YamlMime:RESTOperation
 uid: drs.prod.reco.microsoft.com.industry-rest.user-to-itemrecommendations.getuserpicks
 name: Get User Picks
-service: Industry Rest
+service: Intelligent Recommendations
 groupName: User-to-Item Recommendations
 apiVersion: 2021-06-15-preview-008
 summary: Returns the personal picks - items from the catalog which user is likely to interact with.
@@ -131,5 +131,5 @@ security:
   - name: user_impersonation
     description: Impersonate your user account.
 metadata:
-  description: Learn more about Industry Rest service - Returns the personal picks - items from the catalog which user is likely to interact with.
+  description: Learn more about Intelligent Recommendations service - Returns the personal picks - items from the catalog which user is likely to interact with.
 errorCodes: []

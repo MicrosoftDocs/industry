@@ -2,9 +2,9 @@
 uid: drs.prod.reco.microsoft.com.industry-rest.item-to-itemrecommendations
 name: Item-to-Item Recommendations
 apiVersion: 2021-06-15-preview-008
-service: Industry Rest
+service: Intelligent Recommendations
 metadata:
-  description: Learn more about [Industry Rest Item-to-Item Recommendations Operations]. How to [Get Similar Items,Recommendations2,Get Cart Recommendations].
+  description: Learn more about [Intelligent Recommendations Item-to-Item Recommendations Operations]. How to [Get Similar Items,Recommendations2,Get Cart Recommendations].
 operations:
 - uid: drs.prod.reco.microsoft.com.industry-rest.item-to-itemrecommendations.getcartrecommendations
   summary: Single item version - Cart, or 'Frequenty Bought Together' (FBT) recommendations return items which are likely to be consumed together with the seed item.

@@ -2,9 +2,9 @@
 uid: drs.prod.reco.microsoft.com.industry-rest.user-to-itemrecommendations
 name: User-to-Item Recommendations
 apiVersion: 2021-06-15-preview-008
-service: Industry Rest
+service: Intelligent Recommendations
 metadata:
-  description: Learn more about [Industry Rest User-to-Item Recommendations Operations]. How to [Get User Picks,Personalize].
+  description: Learn more about [Intelligent Recommendations User-to-Item Recommendations Operations]. How to [Get User Picks,Personalize].
 operations:
 - uid: drs.prod.reco.microsoft.com.industry-rest.user-to-itemrecommendations.getuserpicks
   summary: Returns the personal picks - items from the catalog which user is likely to interact with.
