@@ -1,0 +1,12 @@
+### YamlMime:RESTOperationGroup
+uid: drs.prod.reco.microsoft.com.industry-rest.user-to-itemrecommendations
+name: User-to-Item Recommendations
+apiVersion: 2021-06-15-preview-008
+service: Industry Rest
+metadata:
+  description: Learn more about [Industry Rest User-to-Item Recommendations Operations]. How to [Get User Picks,Personalize].
+operations:
+- uid: drs.prod.reco.microsoft.com.industry-rest.user-to-itemrecommendations.getuserpicks
+  summary: Returns the personal picks - items from the catalog which user is likely to interact with.
+- uid: drs.prod.reco.microsoft.com.industry-rest.user-to-itemrecommendations.personalize
+  summary: Personalizes the given set of items and returns them reranked with top item being most likely for user to interact with.

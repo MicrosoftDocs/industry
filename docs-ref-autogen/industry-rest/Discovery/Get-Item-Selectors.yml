@@ -1,0 +1,99 @@
+### YamlMime:RESTOperation
+uid: drs.prod.reco.microsoft.com.industry-rest.discovery.getitemselectors
+name: Get Item Selectors
+service: Industry Rest
+groupName: Discovery
+apiVersion: 2021-06-15-preview-008
+summary: Use this helper API to receive “selectors” or filters (if applicable) for the Visual Similar recommendations lists.
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Discovery/Similar/Selectors/{itemId}?environmentId={environmentId}
+- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Discovery/Similar/Selectors/{itemId}?environmentId={environmentId}&modeling={modeling}&channelId={channelId}&catalogId={catalogId}&algoType={algoType}
+  isOptional: true
+uriParameters:
+- name: itemId
+  in: path
+  isRequired: true
+  description: The item you query about.
+  types:
+  - uid: string
+- name: environmentId
+  in: query
+  isRequired: true
+  description: Unique customer and/or IR environment id
+  types:
+  - uid: string
+- name: modeling
+  in: query
+  description: Modeling instance name
+  types:
+  - uid: string
+- name: channelId
+  in: query
+  description: Items may be assigned to a channel entity, allowing IR to provide recommendations only within the confines of a specific channel. Items from other channels will be automatically filtered out. This is an optional parameter, relevant only for customers that have previously defined a channel Id in their dataset.
+  types:
+  - uid: string
+- name: catalogId
+  in: query
+  description: Items may be assigned to a catalog entity within a channel, allowing IR to provide recommendations only within the confines of a specific catalog. Items from other catalogs will be automatically filtered out. This is an optional parameter, relevant only for customers that have previously defined a catalog Id in their dataset.
+  types:
+  - uid: string
+- name: algoType
+  in: query
+  description: Algorithm (or similarity) type selector
+  types:
+  - uid: string
+responses:
+- name: 200 OK
+  description: Successful. The response includes the list of selectors.
+  types:
+  - uid: discoveryResponse
+requestHeader: []
+definitions:
+- name: discoveryResponse
+  kind: object
+  properties:
+  - name: value
+    description: ''
+    types:
+    - uid: selectors
+      isArray: true
+  - name: testInfo
+    description: ''
+    types:
+    - uid: object
+- name: selectors
+  kind: object
+  properties:
+  - name: keyName
+    description: ''
+    types:
+    - uid: string
+  - name: values
+    description: ''
+    types:
+    - uid: keyValue
+      isArray: true
+- name: keyValue
+  kind: object
+  properties:
+  - name: valueString
+    description: ''
+    types:
+    - uid: string
+examples: []
+security:
+- name: azure_auth
+  type: oauth2
+  description: Azure Active Directory OAuth2 Flow
+  flow: implicit
+  authorizationUrl: https://login.microsoftonline.com/common/oauth2/authorize
+  scopes:
+  - name: user_impersonation
+    description: Impersonate your user account.
+metadata:
+  description: Use this helper API to receive “selectors” or filters (if applicable) for the Visual Similar recommendations lists.
+errorCodes: []

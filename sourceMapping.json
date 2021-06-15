@@ -1,0 +1,11 @@
+{
+  "Top-Charts/Get-New-Items.yml": "https://github.com/MicrosoftDocs/industry-solutions-pr/blob/ir-july-release/industry-solutions/retail/intelligent-recommendations/reference/ir.json#L85",
+  "Top-Charts/Get-Popular-Items.yml": "https://github.com/MicrosoftDocs/industry-solutions-pr/blob/ir-july-release/industry-solutions/retail/intelligent-recommendations/reference/ir.json#L39",
+  "Top-Charts/Get-Trending-Items.yml": "https://github.com/MicrosoftDocs/industry-solutions-pr/blob/ir-july-release/industry-solutions/retail/intelligent-recommendations/reference/ir.json#L128",
+  "Item-to-Item-Recommendations/Get-Cart-Recommendations.yml": "https://github.com/MicrosoftDocs/industry-solutions-pr/blob/ir-july-release/industry-solutions/retail/intelligent-recommendations/reference/ir.json#L227",
+  "Item-to-Item-Recommendations/Get-Similar-Items.yml": "https://github.com/MicrosoftDocs/industry-solutions-pr/blob/ir-july-release/industry-solutions/retail/intelligent-recommendations/reference/ir.json#L171",
+  "Item-to-Item-Recommendations/GetCartRecommendations2.yml": "https://github.com/MicrosoftDocs/industry-solutions-pr/blob/ir-july-release/industry-solutions/retail/intelligent-recommendations/reference/ir.json#L277",
+  "User-to-Item-Recommendations/Get-User-Picks.yml": "https://github.com/MicrosoftDocs/industry-solutions-pr/blob/ir-july-release/industry-solutions/retail/intelligent-recommendations/reference/ir.json#L327",
+  "User-to-Item-Recommendations/Personalize.yml": "https://github.com/MicrosoftDocs/industry-solutions-pr/blob/ir-july-release/industry-solutions/retail/intelligent-recommendations/reference/ir.json#L370",
+  "Discovery/Get-Item-Selectors.yml": "https://github.com/MicrosoftDocs/industry-solutions-pr/blob/ir-july-release/industry-solutions/retail/intelligent-recommendations/reference/ir.json#L416"
+}
