@@ -1,14 +1,14 @@
 ### YamlMime:RESTOperationGroup
-uid: drs.prod.reco.microsoft.com.industry-rest.item-to-itemrecommendations
+uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.item-to-itemrecommendations
 name: Item-to-Item Recommendations
 apiVersion: 2021-06-15-preview-008
 service: Intelligent Recommendations
 metadata:
   description: Learn more about [Intelligent Recommendations Item-to-Item Recommendations Operations]. How to [Get Similar Items,Recommendations2,Get Cart Recommendations].
 operations:
-- uid: drs.prod.reco.microsoft.com.industry-rest.item-to-itemrecommendations.getcartrecommendations
+- uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.item-to-itemrecommendations.getcartrecommendations
   summary: Single item version - Cart, or 'Frequenty Bought Together' (FBT) recommendations return items which are likely to be consumed together with the seed item.
-- uid: drs.prod.reco.microsoft.com.industry-rest.item-to-itemrecommendations.getcartrecommendations2
+- uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.item-to-itemrecommendations.getcartrecommendations2
   summary: Cart, or 'Frequenty Bought Together' (FBT) recommendations return items which are likely to be consumed together with the seed item(s).
-- uid: drs.prod.reco.microsoft.com.industry-rest.item-to-itemrecommendations.getsimilaritems
+- uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.item-to-itemrecommendations.getsimilaritems
   summary: Returns a list of item->item recommendations. Recommended items can be similar to the seed item or related in some way, this based on the way data is structured and based on the desired algorithm.

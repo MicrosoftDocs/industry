@@ -1,5 +1,5 @@
 ### YamlMime:RESTOperation
-uid: drs.prod.reco.microsoft.com.industry-rest.discovery.getitemselectors
+uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.discovery.getitemselectors
 name: Get Item Selectors
 service: Intelligent Recommendations
 groupName: Discovery

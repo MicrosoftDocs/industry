@@ -1,5 +1,5 @@
 ### YamlMime:RESTOperation
-uid: drs.prod.reco.microsoft.com.industry-rest.topcharts.gettrendingitems
+uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.topcharts.gettrendingitems
 name: Get Trending Items
 service: Intelligent Recommendations
 groupName: Top Charts

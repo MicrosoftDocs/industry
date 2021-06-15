@@ -1,17 +1,17 @@
 ### YamlMime:RESTOperation
-uid: drs.prod.reco.microsoft.com.industry-rest.item-to-itemrecommendations.getcartrecommendations
-name: Get Cart Recommendations
+uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.item-to-itemrecommendations.getsimilaritems
+name: Get Similar Items
 service: Intelligent Recommendations
 groupName: Item-to-Item Recommendations
 apiVersion: 2021-06-15-preview-008
-summary: Single item version - Cart, or 'Frequenty Bought Together' (FBT) recommendations return items which are likely to be consumed together with the seed item.
+summary: Returns a list of item->item recommendations. Recommended items can be similar to the seed item or related in some way, this based on the way data is structured and based on the desired algorithm.
 consumes:
 - application/json
 produces:
 - application/json
 paths:
-- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Cart/{seedItemId}?environmentId={environmentId}
-- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Cart/{seedItemId}?environmentId={environmentId}&modeling={modeling}&channelId={channelId}&catalogId={catalogId}&count={count}&skipItems={skipItems}&userId={userId}
+- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Similar/{seedItemId}?environmentId={environmentId}
+- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Similar/{seedItemId}?environmentId={environmentId}&modeling={modeling}&channelId={channelId}&catalogId={catalogId}&algoType={algoType}&count={count}&skipItems={skipItems}&userId={userId}
   isOptional: true
 uriParameters:
 - name: seedItemId
@@ -41,6 +41,11 @@ uriParameters:
   description: Items may be assigned to a catalog entity within a channel, allowing IR to provide recommendations only within the confines of a specific catalog. Items from other catalogs will be automatically filtered out. This is an optional parameter, relevant only for customers that have previously defined a catalog Id in their dataset.
   types:
   - uid: string
+- name: algoType
+  in: query
+  description: Algorithm (or similarity) type selector
+  types:
+  - uid: string
 - name: count
   in: query
   description: Number of items to return.
@@ -61,6 +66,8 @@ responses:
   description: Successful. The response includes the list of items.
   types:
   - uid: recoResponse
+- name: Other Status Codes
+  description: ''
 requestHeader: []
 definitions:
 - name: recoResponse
@@ -136,5 +143,5 @@ security:
   - name: user_impersonation
     description: Impersonate your user account.
 metadata:
-  description: Single item version - Cart, or 'Frequenty Bought Together' (FBT) recommendations return items which are likely to be consumed together with the seed item.
+  description: Returns a list of item->item recommendations. Recommended items can be similar to the seed item or related in some way, this based on the way data is structured and based on the desired algorithm.
 errorCodes: []
