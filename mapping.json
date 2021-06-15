@@ -7,7 +7,7 @@
   "remove_tag_from_operationId": true,
   "organizations": [{
       "services": [{
-          "toc_title": "Industry Rest",
+          "toc_title": "Intelligent Recommendations",
           "url_group": "industry-rest",
           "service_index": "index.md",
           "swagger_files": [
