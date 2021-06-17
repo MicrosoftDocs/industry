@@ -3,7 +3,7 @@ uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.user-to-it
 name: Get User Picks
 service: Intelligent Recommendations
 groupName: User-to-Item Recommendations
-apiVersion: 2021-06-15-preview-008
+apiVersion: 2021-06-17-preview-009
 summary: Returns the personal picks - items from the catalog which user is likely to interact with.
 consumes:
 - application/json

@@ -3,7 +3,7 @@ uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.discovery.
 name: Get Item Selectors
 service: Intelligent Recommendations
 groupName: Discovery
-apiVersion: 2021-06-15-preview-008
+apiVersion: 2021-06-17-preview-009
 summary: Use this helper API to receive “selectors” or filters (if applicable) for the Visual Similar recommendations lists.
 consumes:
 - application/json
@@ -57,23 +57,23 @@ definitions:
   kind: object
   properties:
   - name: value
-    description: ''
+    description: Array of selectors
     types:
     - uid: selectors
       isArray: true
   - name: testInfo
-    description: ''
+    description: Debug information, for internal use only
     types:
     - uid: object
 - name: selectors
   kind: object
   properties:
   - name: keyName
-    description: ''
+    description: The key of item selector, example - color, size, etc
     types:
     - uid: string
   - name: values
-    description: ''
+    description: Key,Value entities which describe item selectors, example - (color,red)
     types:
     - uid: keyValue
       isArray: true
@@ -81,7 +81,7 @@ definitions:
   kind: object
   properties:
   - name: valueString
-    description: ''
+    description: Key,Value entities which describe item selectors, example - (color,red)
     types:
     - uid: string
 examples: []

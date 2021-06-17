@@ -1,12 +1,12 @@
 ### YamlMime:RESTOperationGroup
 uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.user-to-itemrecommendations
 name: User-to-Item Recommendations
-apiVersion: 2021-06-15-preview-008
+apiVersion: 2021-06-17-preview-009
 service: Intelligent Recommendations
 metadata:
-  description: Learn more about [Intelligent Recommendations User-to-Item Recommendations Operations]. How to [Get User Picks,Personalize].
+  description: Learn more about [Intelligent Recommendations User-to-Item Recommendations Operations]. How to [Get User Picks,Personalize Items].
 operations:
 - uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.user-to-itemrecommendations.getuserpicks
   summary: Returns the personal picks - items from the catalog which user is likely to interact with.
-- uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.user-to-itemrecommendations.personalize
+- uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.user-to-itemrecommendations.personalizeitems
   summary: Personalizes the given set of items and returns them reranked with top item being most likely for user to interact with.
