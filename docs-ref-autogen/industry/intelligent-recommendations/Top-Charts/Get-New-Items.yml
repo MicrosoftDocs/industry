@@ -1,5 +1,5 @@
 ### YamlMime:RESTOperation
-uid: drs.prod.reco.microsoft.com.industry-rest.topcharts.getnewitems
+uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.topcharts.getnewitems
 name: Get New Items
 service: Intelligent Recommendations
 groupName: Top Charts

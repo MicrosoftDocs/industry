@@ -1,25 +1,19 @@
 ### YamlMime:RESTOperation
-uid: drs.prod.reco.microsoft.com.industry-rest.item-to-itemrecommendations.getcartrecommendations2
-name: Recommendations2
+uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.user-to-itemrecommendations.getuserpicks
+name: Get User Picks
 service: Intelligent Recommendations
-groupName: Item-to-Item Recommendations
+groupName: User-to-Item Recommendations
 apiVersion: 2021-06-15-preview-008
-summary: Cart, or 'Frequenty Bought Together' (FBT) recommendations return items which are likely to be consumed together with the seed item(s).
+summary: Returns the personal picks - items from the catalog which user is likely to interact with.
 consumes:
 - application/json
 produces:
 - application/json
 paths:
-- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Cart/Items?seedItemIds={seedItemIds}&environmentId={environmentId}
-- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Cart/Items?seedItemIds={seedItemIds}&environmentId={environmentId}&modeling={modeling}&channelId={channelId}&catalogId={catalogId}&count={count}&skipItems={skipItems}&userId={userId}
+- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Picks?environmentId={environmentId}&userId={userId}
+- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Picks?environmentId={environmentId}&modeling={modeling}&userId={userId}&channelId={channelId}&catalogId={catalogId}&count={count}&skipItems={skipItems}
   isOptional: true
 uriParameters:
-- name: seedItemIds
-  in: query
-  isRequired: true
-  description: Item IDs (comma separated) for which recommendations are requested
-  types:
-  - uid: string
 - name: environmentId
   in: query
   isRequired: true
@@ -29,6 +23,12 @@ uriParameters:
 - name: modeling
   in: query
   description: Modeling instance name
+  types:
+  - uid: string
+- name: userId
+  in: query
+  isRequired: true
+  description: User identifier, user for whom the results are personalized.
   types:
   - uid: string
 - name: channelId
@@ -51,11 +51,6 @@ uriParameters:
   description: Number of items to skip, used for paging the recommendation results.
   types:
   - uid: integer
-- name: userId
-  in: query
-  description: User identifier, used to apply personalization on the results. Note, to turn personalization ON, additional flags should be set to true.
-  types:
-  - uid: string
 responses:
 - name: 200 OK
   description: Successful. The response includes the list of items.
@@ -136,5 +131,5 @@ security:
   - name: user_impersonation
     description: Impersonate your user account.
 metadata:
-  description: Cart, or 'Frequenty Bought Together' (FBT) recommendations return items which are likely to be consumed together with the seed item(s).
+  description: Learn more about Intelligent Recommendations service - Returns the personal picks - items from the catalog which user is likely to interact with.
 errorCodes: []

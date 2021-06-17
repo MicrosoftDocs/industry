@@ -1,1 +1,3 @@
-# Welcome to rest-ref-template!
+# Intelligent Recommendations REST API
+
+TODO: Add description

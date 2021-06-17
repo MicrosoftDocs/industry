@@ -1,14 +1,14 @@
 ### YamlMime:RESTOperationGroup
-uid: drs.prod.reco.microsoft.com.industry-rest.topcharts
+uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.topcharts
 name: Top Charts
 apiVersion: 2021-06-15-preview-008
 service: Intelligent Recommendations
 metadata:
   description: Learn more about [Intelligent Recommendations Top Charts Operations]. How to [Get New Items,Get Popular Items,Get Trending Items].
 operations:
-- uid: drs.prod.reco.microsoft.com.industry-rest.topcharts.getnewitems
+- uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.topcharts.getnewitems
   summary: Returns the catalog items ranked by release date, newest first.
-- uid: drs.prod.reco.microsoft.com.industry-rest.topcharts.getpopularitems
+- uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.topcharts.getpopularitems
   summary: Returns the most popular items from the catalog ranked by the number of interactions over a period of time.
-- uid: drs.prod.reco.microsoft.com.industry-rest.topcharts.gettrendingitems
+- uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.topcharts.gettrendingitems
   summary: Returns the catalog items ranked by popularity giving newer events more weight than older ones. Popularity is scored over a period of configurable period of time.

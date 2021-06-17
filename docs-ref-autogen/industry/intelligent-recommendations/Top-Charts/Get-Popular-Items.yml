@@ -1,25 +1,19 @@
 ### YamlMime:RESTOperation
-uid: drs.prod.reco.microsoft.com.industry-rest.item-to-itemrecommendations.getsimilaritems
-name: Get Similar Items
+uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.topcharts.getpopularitems
+name: Get Popular Items
 service: Intelligent Recommendations
-groupName: Item-to-Item Recommendations
+groupName: Top Charts
 apiVersion: 2021-06-15-preview-008
-summary: Returns a list of item->item recommendations. Recommended items can be similar to the seed item or related in some way, this based on the way data is structured and based on the desired algorithm.
+summary: Returns the most popular items from the catalog ranked by the number of interactions over a period of time.
 consumes:
 - application/json
 produces:
 - application/json
 paths:
-- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Similar/{seedItemId}?environmentId={environmentId}
-- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Similar/{seedItemId}?environmentId={environmentId}&modeling={modeling}&channelId={channelId}&catalogId={catalogId}&algoType={algoType}&count={count}&skipItems={skipItems}&userId={userId}
+- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Popular?environmentId={environmentId}
+- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Popular?environmentId={environmentId}&modeling={modeling}&channelId={channelId}&catalogId={catalogId}&count={count}&skipItems={skipItems}&userId={userId}
   isOptional: true
 uriParameters:
-- name: seedItemId
-  in: path
-  isRequired: true
-  description: Item for which recommendations are requested
-  types:
-  - uid: string
 - name: environmentId
   in: query
   isRequired: true
@@ -39,11 +33,6 @@ uriParameters:
 - name: catalogId
   in: query
   description: Items may be assigned to a catalog entity within a channel, allowing IR to provide recommendations only within the confines of a specific catalog. Items from other catalogs will be automatically filtered out. This is an optional parameter, relevant only for customers that have previously defined a catalog Id in their dataset.
-  types:
-  - uid: string
-- name: algoType
-  in: query
-  description: Algorithm (or similarity) type selector
   types:
   - uid: string
 - name: count
@@ -143,5 +132,5 @@ security:
   - name: user_impersonation
     description: Impersonate your user account.
 metadata:
-  description: Returns a list of item->item recommendations. Recommended items can be similar to the seed item or related in some way, this based on the way data is structured and based on the desired algorithm.
+  description: Returns the most popular items from the catalog ranked by the number of interactions over a period of time.
 errorCodes: []

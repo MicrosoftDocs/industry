@@ -1,17 +1,17 @@
 ### YamlMime:RESTOperation
-uid: drs.prod.reco.microsoft.com.industry-rest.topcharts.getpopularitems
-name: Get Popular Items
+uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.user-to-itemrecommendations.personalize
+name: Personalize
 service: Intelligent Recommendations
-groupName: Top Charts
+groupName: User-to-Item Recommendations
 apiVersion: 2021-06-15-preview-008
-summary: Returns the most popular items from the catalog ranked by the number of interactions over a period of time.
+summary: Personalizes the given set of items and returns them reranked with top item being most likely for user to interact with.
 consumes:
 - application/json
 produces:
 - application/json
 paths:
-- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Popular?environmentId={environmentId}
-- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Popular?environmentId={environmentId}&modeling={modeling}&channelId={channelId}&catalogId={catalogId}&count={count}&skipItems={skipItems}&userId={userId}
+- content: POST https://drs.prod.reco.microsoft.com/Reco/V1.0/Personalization?environmentId={environmentId}&userId={userId}
+- content: POST https://drs.prod.reco.microsoft.com/Reco/V1.0/Personalization?environmentId={environmentId}&modeling={modeling}&channelId={channelId}&catalogId={catalogId}&userId={userId}
   isOptional: true
 uriParameters:
 - name: environmentId
@@ -35,19 +35,10 @@ uriParameters:
   description: Items may be assigned to a catalog entity within a channel, allowing IR to provide recommendations only within the confines of a specific catalog. Items from other catalogs will be automatically filtered out. This is an optional parameter, relevant only for customers that have previously defined a catalog Id in their dataset.
   types:
   - uid: string
-- name: count
-  in: query
-  description: Number of items to return.
-  types:
-  - uid: integer
-- name: skipItems
-  in: query
-  description: Number of items to skip, used for paging the recommendation results.
-  types:
-  - uid: integer
 - name: userId
   in: query
-  description: User identifier, used to apply personalization on the results. Note, to turn personalization ON, additional flags should be set to true.
+  isRequired: true
+  description: User identifier, user for whom the results are personalized.
   types:
   - uid: string
 responses:
@@ -55,10 +46,24 @@ responses:
   description: Successful. The response includes the list of items.
   types:
   - uid: recoResponse
-- name: Other Status Codes
-  description: ''
+requestBody:
+- name: default
+  parameters:
+  - name: RecommendationContext
+    in: body
+    description: ''
+    types:
+    - uid: RecommendationContext
 requestHeader: []
 definitions:
+- name: RecommendationContext
+  kind: object
+  properties:
+  - name: PersonalizationCandidates
+    description: ''
+    types:
+    - uid: string
+      isArray: true
 - name: recoResponse
   kind: object
   properties:
@@ -103,6 +108,13 @@ definitions:
     description: ''
     types:
     - uid: string
+- name: personalizationBody
+  kind: object
+  properties:
+  - name: RecommendationContext
+    description: ''
+    types:
+    - uid: RecommendationContext
 - name: recommendedItems
   kind: object
   properties:
@@ -132,5 +144,5 @@ security:
   - name: user_impersonation
     description: Impersonate your user account.
 metadata:
-  description: Returns the most popular items from the catalog ranked by the number of interactions over a period of time.
+  description: Personalizes the given set of items and returns them reranked with top item being most likely for user to interact with.
 errorCodes: []
