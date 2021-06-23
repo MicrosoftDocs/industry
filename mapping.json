@@ -9,7 +9,7 @@
       "services": [{
           "toc_title": "Intelligent Recommendations",
           "url_group": "industry/intelligent-recommendations",
-          "service_index": "index.md",
+          "service_index": "docs-ref-conceptual/intelligent-recommendations/index.md",
           "swagger_files": [
             {
               "source": "industry-rest/industry-solutions/retail/intelligent-recommendations/reference/ir.json"
