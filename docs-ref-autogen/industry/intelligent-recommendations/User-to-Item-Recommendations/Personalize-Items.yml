@@ -4,7 +4,7 @@ name: Personalize Items
 service: Intelligent Recommendations
 groupName: User-to-Item Recommendations
 apiVersion: 2021-06-17-preview-009
-summary: Personalizes the given set of items and returns them reranked with top item being most likely for user to interact with.
+summary: Personalizes the set of items and returns them ranked, with the top item the most likely one that the user will interact with.
 consumes:
 - application/json
 produces:
@@ -17,28 +17,28 @@ uriParameters:
 - name: environmentId
   in: query
   isRequired: true
-  description: Unique customer and/or IR environment id
+  description: Unique customer or Intelligent Recommendations environment ID.
   types:
   - uid: string
 - name: modeling
   in: query
-  description: Modeling instance name
+  description: Modeling instance name.
   types:
   - uid: string
 - name: channelId
   in: query
-  description: Items may be assigned to a channel entity, allowing IR to provide recommendations only within the confines of a specific channel. Items from other channels will be automatically filtered out. This is an optional parameter, relevant only for customers that have previously defined a channel Id in their dataset.
+  description: Items may be assigned to a channel entity, allowing Intelligent Recommendations to provide recommendations only within the confines of a specific channel. Items from other channels are automatically filtered out. This parameter is optional, relevant only for customers who have previously defined a channel ID in their dataset.
   types:
   - uid: string
 - name: catalogId
   in: query
-  description: Items may be assigned to a catalog entity within a channel, allowing IR to provide recommendations only within the confines of a specific catalog. Items from other catalogs will be automatically filtered out. This is an optional parameter, relevant only for customers that have previously defined a catalog Id in their dataset.
+  description: Items may be assigned to a catalog entity within a channel, allowing Intelligent Recommendations to provide recommendations only within the confines of a specific catalog. Items from other catalogs are automatically filtered out. This parameter is optional, relevant only for customers who have previously defined a catalog ID in their dataset.
   types:
   - uid: string
 - name: userId
   in: query
   isRequired: true
-  description: User identifier, user for whom the results are personalized.
+  description: User identifier for the user to personalize the results for.
   types:
   - uid: string
 responses:
@@ -137,12 +137,12 @@ examples: []
 security:
 - name: azure_auth
   type: oauth2
-  description: Azure Active Directory OAuth2 Flow
+  description: Azure Active Directory OAuth 2.0 flow
   flow: implicit
   authorizationUrl: https://login.microsoftonline.com/common/oauth2/authorize
   scopes:
   - name: user_impersonation
     description: Impersonate your user account.
 metadata:
-  description: Personalizes the given set of items and returns them reranked with top item being most likely for user to interact with.
+  description: Personalizes the set of items and returns them ranked, with the top item the most likely one that the user will interact with.
 errorCodes: []

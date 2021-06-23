@@ -7,4 +7,4 @@ metadata:
   description: Learn more about [Intelligent Recommendations Discovery Operations]. How to [Get Item Selectors].
 operations:
 - uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.discovery.getitemselectors
-  summary: Use this helper API to receive “selectors” or filters (if applicable) for the Visual Similar recommendations lists.
+  summary: Use this helper API to receive selectors or filters (if applicable) for the visually similar recommendations lists.
