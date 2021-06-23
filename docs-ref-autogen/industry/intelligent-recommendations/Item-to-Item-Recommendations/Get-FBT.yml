@@ -4,7 +4,7 @@ name: Get FBT
 service: Intelligent Recommendations
 groupName: Item-to-Item Recommendations
 apiVersion: 2021-06-17-preview-009
-summary: Single item version - Cart, or 'Frequenty Bought Together' (FBT) recommendations return items which are likely to be consumed together with the seed item.
+summary: Single-item version. Cart or frequently bought together recommendations return items that are likely to be consumed together with the seed item.
 consumes:
 - application/json
 produces:
@@ -17,28 +17,28 @@ uriParameters:
 - name: seedItemId
   in: path
   isRequired: true
-  description: Item for which recommendations are requested
+  description: Item for which recommendations are requested.
   types:
   - uid: string
 - name: environmentId
   in: query
   isRequired: true
-  description: Unique customer and/or IR environment id
+  description: Unique customer or Intelligent Recommendations environment ID.
   types:
   - uid: string
 - name: modeling
   in: query
-  description: Modeling instance name
+  description: Modeling instance name.
   types:
   - uid: string
 - name: channelId
   in: query
-  description: Items may be assigned to a channel entity, allowing IR to provide recommendations only within the confines of a specific channel. Items from other channels will be automatically filtered out. This is an optional parameter, relevant only for customers that have previously defined a channel Id in their dataset.
+  description: Items may be assigned to a channel entity, allowing Intelligent Recommendations to provide recommendations only within the confines of a specific channel. Items from other channels are automatically filtered out. This parameter is optional, relevant only for customers who have previously defined a channel ID in their dataset.
   types:
   - uid: string
 - name: catalogId
   in: query
-  description: Items may be assigned to a catalog entity within a channel, allowing IR to provide recommendations only within the confines of a specific catalog. Items from other catalogs will be automatically filtered out. This is an optional parameter, relevant only for customers that have previously defined a catalog Id in their dataset.
+  description: Items may be assigned to a catalog entity within a channel, allowing Intelligent Recommendations to provide recommendations only within the confines of a specific catalog. Items from other catalogs are automatically filtered out. This parameter is optional, relevant only for customers who have previously defined a catalog ID in their dataset.
   types:
   - uid: string
 - name: count
@@ -53,7 +53,7 @@ uriParameters:
   - uid: integer
 - name: userId
   in: query
-  description: User identifier, used to apply personalization on the results. Note, to turn personalization ON, additional flags should be set to true.
+  description: User identifier, used to apply personalization on the results. To turn on personalization, set other flags to true.
   types:
   - uid: string
 responses:
@@ -129,12 +129,12 @@ examples: []
 security:
 - name: azure_auth
   type: oauth2
-  description: Azure Active Directory OAuth2 Flow
+  description: Azure Active Directory OAuth 2.0 flow
   flow: implicit
   authorizationUrl: https://login.microsoftonline.com/common/oauth2/authorize
   scopes:
   - name: user_impersonation
     description: Impersonate your user account.
 metadata:
-  description: Single item version - Cart, or 'Frequenty Bought Together' (FBT) recommendations return items which are likely to be consumed together with the seed item.
+  description: Single-item version. Cart or frequently bought together recommendations return items that are likely to be consumed together with the seed item.
 errorCodes: []

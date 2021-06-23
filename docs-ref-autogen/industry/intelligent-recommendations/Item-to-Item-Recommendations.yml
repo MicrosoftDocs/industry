@@ -7,8 +7,8 @@ metadata:
   description: Learn more about [Intelligent Recommendations Item-to-Item Recommendations Operations]. How to [Get FBT,Get Similar Items,Get Cart Recommendations].
 operations:
 - uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.item-to-itemrecommendations.getcartrecommendations
-  summary: Cart, or 'Frequenty Bought Together' (FBT) recommendations return items which are likely to be consumed together with the seed item(s).
+  summary: Cart or frequently bought together recommendations return items that are likely to be consumed together with the seed item(s).
 - uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.item-to-itemrecommendations.getfbt
-  summary: Single item version - Cart, or 'Frequenty Bought Together' (FBT) recommendations return items which are likely to be consumed together with the seed item.
+  summary: Single-item version. Cart or frequently bought together recommendations return items that are likely to be consumed together with the seed item.
 - uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.item-to-itemrecommendations.getsimilaritems
-  summary: Returns a list of item->item recommendations. Recommended items can be similar to the seed item or related in some way, this based on the way data is structured and based on the desired algorithm.
+  summary: Returns a list of item-to-item recommendations. Recommended items can be similar to the seed item or related in some way, based on the way data is structured and the algorithm.

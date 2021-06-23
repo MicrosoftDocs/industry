@@ -1,5 +1,5 @@
 # Intelligent Recommendations
-## [Overview](../index.md)
+## [Overview](../docs-ref-conceptual/intelligent-recommendations/index.md)
 ## Discovery
 ### [Overview](industry/intelligent-recommendations/Discovery.yml)
 ### [Get Item Selectors](industry/intelligent-recommendations/Discovery/Get-Item-Selectors.yml)
