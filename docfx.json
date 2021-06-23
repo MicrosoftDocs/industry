@@ -18,14 +18,14 @@
           "toc.md"
         ],
         "exclude": [],
-        "dest": "api/industry-rest"
+        "dest": "api/industry"
       },
       {
         "src": "docs-ref-conceptual",
         "files": [
           "**.md"
         ],
-        "dest": "api/industry-rest"
+        "dest": "api/industry"
       }
     ],
     "externalReference": [],
@@ -38,7 +38,7 @@
       "_mockServerUrl": "https://apiexproxy.azurewebsites.net/svc",
       "_mockServerAuthorization": "Bearer {token:https://graph.windows.net/}",
       "breadcrumb_path": "~/breadcrumb/toc.yml",
-      "rest_product": "industry-rest",
+      "rest_product": "industry",
       "titleSuffix": "Industry Rest API",
       "author": "v-jutao",
       "ms.author": "v-jutao",
@@ -51,7 +51,7 @@
     "fileMetadata": {
       "searchScope": {
         "structured/**.yml": [
-          "industry-rest",
+          "industry",
           "REST"
         ]
       }
