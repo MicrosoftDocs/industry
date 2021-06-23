@@ -21,9 +21,9 @@
         "dest": "api/industry-rest"
       },
       {
-        "src": ".",
+        "src": "docs-ref-conceptual",
         "files": [
-          "index.md"
+          "**.md"
         ],
         "dest": "api/industry-rest"
       }
