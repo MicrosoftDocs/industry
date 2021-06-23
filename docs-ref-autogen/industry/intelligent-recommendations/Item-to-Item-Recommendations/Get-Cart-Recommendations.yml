@@ -3,21 +3,21 @@ uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.item-to-it
 name: Get Cart Recommendations
 service: Intelligent Recommendations
 groupName: Item-to-Item Recommendations
-apiVersion: 2021-06-15-preview-008
-summary: Single item version - Cart, or 'Frequenty Bought Together' (FBT) recommendations return items which are likely to be consumed together with the seed item.
+apiVersion: 2021-06-17-preview-009
+summary: Cart, or 'Frequenty Bought Together' (FBT) recommendations return items which are likely to be consumed together with the seed item(s).
 consumes:
 - application/json
 produces:
 - application/json
 paths:
-- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Cart/{seedItemId}?environmentId={environmentId}
-- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Cart/{seedItemId}?environmentId={environmentId}&modeling={modeling}&channelId={channelId}&catalogId={catalogId}&count={count}&skipItems={skipItems}&userId={userId}
+- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Cart/Items?seedItemIds={seedItemIds}&environmentId={environmentId}
+- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Cart/Items?seedItemIds={seedItemIds}&environmentId={environmentId}&modeling={modeling}&channelId={channelId}&catalogId={catalogId}&count={count}&skipItems={skipItems}&userId={userId}
   isOptional: true
 uriParameters:
-- name: seedItemId
-  in: path
+- name: seedItemIds
+  in: query
   isRequired: true
-  description: Item for which recommendations are requested
+  description: Item IDs (comma separated) for which recommendations are requested
   types:
   - uid: string
 - name: environmentId
@@ -136,5 +136,5 @@ security:
   - name: user_impersonation
     description: Impersonate your user account.
 metadata:
-  description: Single item version - Cart, or 'Frequenty Bought Together' (FBT) recommendations return items which are likely to be consumed together with the seed item.
+  description: Cart, or 'Frequenty Bought Together' (FBT) recommendations return items which are likely to be consumed together with the seed item(s).
 errorCodes: []

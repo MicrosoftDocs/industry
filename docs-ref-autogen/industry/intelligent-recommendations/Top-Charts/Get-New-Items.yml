@@ -3,7 +3,7 @@ uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.topcharts.
 name: Get New Items
 service: Intelligent Recommendations
 groupName: Top Charts
-apiVersion: 2021-06-15-preview-008
+apiVersion: 2021-06-17-preview-009
 summary: Returns the catalog items ranked by release date, newest first.
 consumes:
 - application/json

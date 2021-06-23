@@ -3,7 +3,7 @@ uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.item-to-it
 name: Get Similar Items
 service: Intelligent Recommendations
 groupName: Item-to-Item Recommendations
-apiVersion: 2021-06-15-preview-008
+apiVersion: 2021-06-17-preview-009
 summary: Returns a list of item->item recommendations. Recommended items can be similar to the seed item or related in some way, this based on the way data is structured and based on the desired algorithm.
 consumes:
 - application/json

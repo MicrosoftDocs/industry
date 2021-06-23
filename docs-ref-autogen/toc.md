@@ -6,8 +6,8 @@
 ## Item-to-Item Recommendations
 ### [Overview](industry/intelligent-recommendations/Item-to-Item-Recommendations.yml)
 ### [Get Cart Recommendations](industry/intelligent-recommendations/Item-to-Item-Recommendations/Get-Cart-Recommendations.yml)
+### [Get FBT](industry/intelligent-recommendations/Item-to-Item-Recommendations/Get-FBT.yml)
 ### [Get Similar Items](industry/intelligent-recommendations/Item-to-Item-Recommendations/Get-Similar-Items.yml)
-### [Recommendations2](industry/intelligent-recommendations/Item-to-Item-Recommendations/GetCartRecommendations2.yml)
 ## Top Charts
 ### [Overview](industry/intelligent-recommendations/Top-Charts.yml)
 ### [Get New Items](industry/intelligent-recommendations/Top-Charts/Get-New-Items.yml)
@@ -16,4 +16,4 @@
 ## User-to-Item Recommendations
 ### [Overview](industry/intelligent-recommendations/User-to-Item-Recommendations.yml)
 ### [Get User Picks](industry/intelligent-recommendations/User-to-Item-Recommendations/Get-User-Picks.yml)
-### [Personalize](industry/intelligent-recommendations/User-to-Item-Recommendations/Personalize.yml)
+### [Personalize Items](industry/intelligent-recommendations/User-to-Item-Recommendations/Personalize-Items.yml)

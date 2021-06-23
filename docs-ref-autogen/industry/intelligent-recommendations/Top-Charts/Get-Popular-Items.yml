@@ -3,7 +3,7 @@ uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.topcharts.
 name: Get Popular Items
 service: Intelligent Recommendations
 groupName: Top Charts
-apiVersion: 2021-06-15-preview-008
+apiVersion: 2021-06-17-preview-009
 summary: Returns the most popular items from the catalog ranked by the number of interactions over a period of time.
 consumes:
 - application/json

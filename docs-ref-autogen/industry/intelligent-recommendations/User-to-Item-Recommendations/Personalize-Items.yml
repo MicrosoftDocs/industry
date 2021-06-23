@@ -1,25 +1,19 @@
 ### YamlMime:RESTOperation
-uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.item-to-itemrecommendations.getcartrecommendations2
-name: Recommendations2
+uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.user-to-itemrecommendations.personalizeitems
+name: Personalize Items
 service: Intelligent Recommendations
-groupName: Item-to-Item Recommendations
-apiVersion: 2021-06-15-preview-008
-summary: Cart, or 'Frequenty Bought Together' (FBT) recommendations return items which are likely to be consumed together with the seed item(s).
+groupName: User-to-Item Recommendations
+apiVersion: 2021-06-17-preview-009
+summary: Personalizes the given set of items and returns them reranked with top item being most likely for user to interact with.
 consumes:
 - application/json
 produces:
 - application/json
 paths:
-- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Cart/Items?seedItemIds={seedItemIds}&environmentId={environmentId}
-- content: GET https://drs.prod.reco.microsoft.com/Reco/V1.0/Cart/Items?seedItemIds={seedItemIds}&environmentId={environmentId}&modeling={modeling}&channelId={channelId}&catalogId={catalogId}&count={count}&skipItems={skipItems}&userId={userId}
+- content: POST https://drs.prod.reco.microsoft.com/Reco/V1.0/Personalization?environmentId={environmentId}&userId={userId}
+- content: POST https://drs.prod.reco.microsoft.com/Reco/V1.0/Personalization?environmentId={environmentId}&modeling={modeling}&channelId={channelId}&catalogId={catalogId}&userId={userId}
   isOptional: true
 uriParameters:
-- name: seedItemIds
-  in: query
-  isRequired: true
-  description: Item IDs (comma separated) for which recommendations are requested
-  types:
-  - uid: string
 - name: environmentId
   in: query
   isRequired: true
@@ -41,19 +35,10 @@ uriParameters:
   description: Items may be assigned to a catalog entity within a channel, allowing IR to provide recommendations only within the confines of a specific catalog. Items from other catalogs will be automatically filtered out. This is an optional parameter, relevant only for customers that have previously defined a catalog Id in their dataset.
   types:
   - uid: string
-- name: count
-  in: query
-  description: Number of items to return.
-  types:
-  - uid: integer
-- name: skipItems
-  in: query
-  description: Number of items to skip, used for paging the recommendation results.
-  types:
-  - uid: integer
 - name: userId
   in: query
-  description: User identifier, used to apply personalization on the results. Note, to turn personalization ON, additional flags should be set to true.
+  isRequired: true
+  description: User identifier, user for whom the results are personalized.
   types:
   - uid: string
 responses:
@@ -61,8 +46,24 @@ responses:
   description: Successful. The response includes the list of items.
   types:
   - uid: recoResponse
+requestBody:
+- name: default
+  parameters:
+  - name: RecommendationContext
+    in: body
+    description: ''
+    types:
+    - uid: RecommendationContext
 requestHeader: []
 definitions:
+- name: RecommendationContext
+  kind: object
+  properties:
+  - name: PersonalizationCandidates
+    description: ''
+    types:
+    - uid: string
+      isArray: true
 - name: recoResponse
   kind: object
   properties:
@@ -107,6 +108,13 @@ definitions:
     description: ''
     types:
     - uid: string
+- name: personalizationBody
+  kind: object
+  properties:
+  - name: RecommendationContext
+    description: ''
+    types:
+    - uid: RecommendationContext
 - name: recommendedItems
   kind: object
   properties:
@@ -136,5 +144,5 @@ security:
   - name: user_impersonation
     description: Impersonate your user account.
 metadata:
-  description: Cart, or 'Frequenty Bought Together' (FBT) recommendations return items which are likely to be consumed together with the seed item(s).
+  description: Personalizes the given set of items and returns them reranked with top item being most likely for user to interact with.
 errorCodes: []

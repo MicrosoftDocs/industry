@@ -1,7 +1,7 @@
 ### YamlMime:RESTOperationGroup
 uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.discovery
 name: Discovery
-apiVersion: 2021-06-15-preview-008
+apiVersion: 2021-06-17-preview-009
 service: Intelligent Recommendations
 metadata:
   description: Learn more about [Intelligent Recommendations Discovery Operations]. How to [Get Item Selectors].
