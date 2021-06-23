@@ -4,7 +4,7 @@ name: Top Charts
 apiVersion: 2021-06-17-preview-009
 service: Intelligent Recommendations
 metadata:
-  description: Learn more about [Intelligent Recommendations Top Charts Operations]. How to [Get New Items,Get Trending Items,Get Popular Items].
+  description: Learn more about [Intelligent Recommendations Top Charts Operations]. How to [Get New Items,Get Popular Items,Get Trending Items].
 operations:
 - uid: drs.prod.reco.microsoft.com.industry.intelligent-recommendations.topcharts.getnewitems
   summary: Returns the catalog items ranked by release date, newest first.
